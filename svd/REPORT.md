@@ -3,7 +3,7 @@
 2. What do the first three components look like? Caption each from Figure 2. If a component is brightness, position, or some other nuisance, say so — that is a finding, not a failure.
    - Components 1 and 2 are primarily anatomical, reflecting the outline of lungs and denser tissue. Component 3 has high values within the lung, medium values between the lungs, and low values outside of the body. Component 3 is also more asymmetrical than components 1 and 2, which could possibly reflect some pneumonia features. 
 3. What k would you use and why? Point at Figure 3. "The highest one" is not a reason; "accuracy plateaus after k=12 and smaller is cheaper and less prone to overfitting" is.
-   - We would choose k=2 because it's negliglibly smaller than k=20 and everything after 2 basically plateaus; by choosing such an early k, we have much less to calculate.
+   - We would choose k=2 because it's negligibly smaller than k=20 and everything after 2 basically plateaus; by choosing such an early k, we have much less to calculate.
 4. How does your result compare to all three baselines? Give the four numbers. If the no-SVD baseline ties you, say what the decomposition bought you instead.
    - The three baselines of majority class, shuffled labels (control), and raw features no SVD were 0.625, 0.515, and 0.761 respectively. Our result of nearest centroid with k=20 was also 0.761, which indicates that it performs no worse than when all raw features are used, while being much less computationally intensive. 
 5. Where could this pipeline have cheated, and how do you know it did not? Name the specific line where mu and Vt were fitted, and say which rows they saw.
