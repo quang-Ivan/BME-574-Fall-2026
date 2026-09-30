@@ -11,4 +11,17 @@ dependencies = [
     "pandas>=3.0.6",
     "scikit-learn>=1.9.1",
     "scipy>=1.18.1",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+]
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu" },
+]
+torchvision = [
+  { index = "pytorch-cpu" },
 ]
