@@ -22,8 +22,8 @@
 
 5. **What did class weighting cost and buy?** Give the before/after recall for the rarest class and the change in overall accuracy. State which you would ship and why.
 
-   With seed 0 for both models, recall for the rarest class (hyperthyroidism) stayed at 0.976, while hypothyroidism recall improved from 0.880 to 0.957. The cost was lower normal recall (0.997 → 0.982), accuracy (0.9906 → 0.9806, a 1.00-percentage-point drop), and macro-F1 (0.9564 → 0.9111). We would ship the weighted model for a screening task in which avoiding missed hypothyroid cases is prioritized over the additional false positives.
+   With seed 0 for both models, recall for the rarest class (hyperthyroidism) stayed at 0.976, while hypothyroidism recall improved from 0.880 to 0.957. The cost was lower for normal recall (0.997 → 0.982), accuracy (0.9906 → 0.9806, a 1.00-percentage-point drop), and macro-F1 (0.9564 → 0.9111). We would ship the weighted model for a screening task in which avoiding missed hypothyroid cases is prioritized over the additional false positives.
 
 6. **What would you do with another two weeks?** One concrete, specific thing — not "try a bigger network".
 
-   Given two more weeks, we would use stratified five-fold cross-validation within the training set to compare no weighting, square-root inverse-frequency weighting, and inverse-frequency weighting. Each fold would fit its scaler and calculate class weights using that fold's training rows only. We would compare hypothyroid recall, normal recall, and macro-F1, and select the weighting scheme without using the test set.
+   Given two more weeks, we would use stratified five-fold cross-validation within the training set to compare no weighting, square-root inverse-frequency weighting, and inverse-frequency weighting. Each fold would fit its scaler and calculate class weights using that fold's training rows only. We would compare hypothyroid recall, normal recall, and macro-F1, and select the weighting scheme without using the test set. We would also make sure that any improvements in hypothyroid recall are not at the expense of the hyperthyroid group.
