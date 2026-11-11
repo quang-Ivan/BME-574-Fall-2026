@@ -8,5 +8,6 @@ dependencies = [
     "matplotlib>=3.11.2",
     "notebook>=7.6.5",
     "numpy>=2.5.4",
+    "torch>=2.14.1",
     "scikit-learn>=1.9.1",
 ]
