@@ -1,0 +1,224 @@
+{
+ "demo": {
+  "track": "demo",
+  "n": 3600,
+  "d": 24,
+  "zdim": 8,
+  "epochs": 150,
+  "n_train": 1800,
+  "n_val": 900,
+  "n_test": 900,
+  "normal_name": "normal",
+  "anomaly_names": [
+   "off-manifold",
+   "edge-of-manifold"
+  ],
+  "prevalence_test": 0.3333,
+  "baseline": {
+   "mahalanobis": 0.9984,
+   "pca_recon": 0.7457,
+   "ocsvm": 0.9921,
+   "supervised_on_val": 0.6541
+  },
+  "vae_sigma_half": {
+   "auc_mean": 0.992,
+   "auc_sd": 0.0012,
+   "auc_recon_only": 0.9768,
+   "per_class": {
+    "off-manifold": 0.9877,
+    "edge-of-manifold": 0.9964
+   },
+   "per_class_sd": {
+    "off-manifold": 0.0014,
+    "edge-of-manifold": 0.0009
+   }
+  },
+  "sigma2_fitted": 0.01285,
+  "sigma2_factor": 38.9,
+  "vae_sigma_fitted": {
+   "auc_mean": 0.9978,
+   "auc_sd": 0.0001,
+   "per_class": {
+    "off-manifold": 1.0,
+    "edge-of-manifold": 0.9956
+   }
+  },
+  "seconds": 27.4,
+  "best_baseline": [
+   "mahalanobis",
+   0.9984
+  ],
+  "verdict": "too close to call against mahalanobis"
+ },
+ "demo_img": {
+  "track": "demo_img",
+  "n": 3000,
+  "d": 784,
+  "zdim": 16,
+  "epochs": 120,
+  "n_train": 1440,
+  "n_val": 780,
+  "n_test": 780,
+  "normal_name": "normal",
+  "anomaly_names": [
+   "focal lesion",
+   "global intensity"
+  ],
+  "prevalence_test": 0.3846,
+  "baseline": {
+   "mahalanobis": 0.7456,
+   "pca_recon": 0.7317,
+   "ocsvm": 0.7191,
+   "supervised_on_val": 0.5484
+  },
+  "vae_sigma_half": {
+   "auc_mean": 0.7259,
+   "auc_sd": 0.0022,
+   "auc_recon_only": 0.7265,
+   "per_class": {
+    "focal lesion": 0.5306,
+    "global intensity": 0.9111
+   },
+   "per_class_sd": {
+    "focal lesion": 0.001,
+    "global intensity": 0.0036
+   }
+  },
+  "sigma2_fitted": 0.28306,
+  "sigma2_factor": 1.8,
+  "vae_sigma_fitted": {
+   "auc_mean": 0.7283,
+   "auc_sd": 0.0007,
+   "per_class": {
+    "focal lesion": 0.5333,
+    "global intensity": 0.9132
+   }
+  },
+  "seconds": 23.4,
+  "best_baseline": [
+   "mahalanobis",
+   0.7456
+  ],
+  "verdict": "the VAE LOSES to mahalanobis"
+ },
+ "breast": {
+  "track": "breast",
+  "n": 569,
+  "d": 30,
+  "zdim": 8,
+  "epochs": 300,
+  "n_train": 214,
+  "n_val": 177,
+  "n_test": 178,
+  "normal_name": "benign",
+  "anomaly_names": [
+   "malignant"
+  ],
+  "prevalence_test": 0.5955,
+  "baseline": {
+   "mahalanobis": 0.9849,
+   "pca_recon": 0.9556,
+   "ocsvm": 0.9856,
+   "supervised_on_val": 0.9945
+  },
+  "vae_sigma_half": {
+   "auc_mean": 0.9789,
+   "auc_sd": 0.0004,
+   "auc_recon_only": 0.9549,
+   "per_class": {
+    "malignant": 0.9789
+   },
+   "per_class_sd": {
+    "malignant": 0.0004
+   }
+  },
+  "sigma2_fitted": 0.11301,
+  "sigma2_factor": 4.4,
+  "vae_sigma_fitted": {
+   "auc_mean": 0.9729,
+   "auc_sd": 0.0032,
+   "per_class": {
+    "malignant": 0.9729
+   }
+  },
+  "seconds": 2.8,
+  "best_baseline": [
+   "ocsvm",
+   0.9856
+  ],
+  "verdict": "the VAE LOSES to ocsvm"
+ },
+ "thyroid": {
+  "track": "thyroid",
+  "n": 7200,
+  "d": 21,
+  "zdim": 8,
+  "epochs": 150,
+  "n_train": 3999,
+  "n_val": 1600,
+  "n_test": 1601,
+  "normal_name": "normal",
+  "anomaly_names": [
+   "hyperthyroid",
+   "hypothyroid"
+  ],
+  "prevalence_test": 0.1668,
+  "baseline": {
+   "mahalanobis": 0.7354,
+   "pca_recon": 0.7505,
+   "ocsvm": 0.7558,
+   "supervised_on_val": 0.991
+  },
+  "vae_sigma_half": {
+   "auc_mean": 0.8129,
+   "auc_sd": 0.0042,
+   "auc_recon_only": 0.8951,
+   "per_class": {
+    "hyperthyroid": 0.9687,
+    "hypothyroid": 0.7462
+   },
+   "per_class_sd": {
+    "hyperthyroid": 0.0037,
+    "hypothyroid": 0.0046
+   }
+  },
+  "sigma2_fitted": 0.07334,
+  "sigma2_factor": 6.8,
+  "vae_sigma_fitted": {
+   "auc_mean": 0.877,
+   "auc_sd": 0.0129,
+   "per_class": {
+    "hyperthyroid": 0.9649,
+    "hypothyroid": 0.8394
+   }
+  },
+  "seconds": 25.5,
+  "best_baseline": [
+   "ocsvm",
+   0.7558
+  ],
+  "verdict": "the VAE wins"
+ },
+ "_meta": {
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "zdim": {
+   "thyroid": 8,
+   "breast": 8,
+   "demo": 8,
+   "demo_img": 16,
+   "oct": 16
+  },
+  "epochs": {
+   "thyroid": 150,
+   "breast": 300,
+   "demo": 150,
+   "demo_img": 120,
+   "oct": 60
+  },
+  "note": "AUC on the test split; the scaler and every baseline are fitted on the training normals only."
+ }
+}
